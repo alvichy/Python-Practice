@@ -1,0 +1,24 @@
+# Ask for a number and see if it is even or odd.
+# Check to see if the number can be divided by 4
+
+number = int(input('Type in a number: '))
+print()
+
+if number % 4 == 0:
+    print('The {} can be divided by 4'.format(number))
+elif number % 2 == 0:
+    print('The number {} is EVEN'.format(number))
+else:
+    print('The number {} is ODD'.format(number))
+
+# Ask for 2 numbers and see if they can be divided into each other
+
+print()
+print('Im going to ask you for 2 numbers')
+num = int(input('Give me the first number: '))
+check = int(input('Give me the second number: '))
+
+if num % check == 0:
+    print('{} can be divided by {}!'.format(num, check))
+else:
+    print('{} cannot be divided by {}'.format(num, check))
