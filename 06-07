@@ -1,0 +1,17 @@
+#06 - Ask the user to input a word. Find out if it is Palindrome.
+
+wrd = input('Type in something: ')
+wrd = str(wrd).lower()
+
+reverse_wrd = wrd[::-1]
+
+if wrd == reverse_wrd:
+    print('{} is a palindrome'.format(wrd))
+else:
+    print('{} is not a palindrome'.format(wrd))
+    
+    
+#07 - Condense code for finding even numbers within a given list.
+a = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+b = [num for num in a if num % 2 == 0]
+print(b)
