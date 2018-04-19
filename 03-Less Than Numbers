@@ -1,0 +1,21 @@
+#Print out all numbers <5.
+#Create a list of numbers <5
+#Print out all numbers < an inputted number 
+
+a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 4, 77]
+
+x = []
+
+for numbers in a:
+    if numbers <= 5:
+        print(numbers)
+        x.append(numbers)
+
+print('\nThe numbers in a list:')
+print(x)
+print()
+
+number = int(input('pick a number: '))
+for i in a:
+    if i < number:
+        print(i)
