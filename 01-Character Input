@@ -1,0 +1,19 @@
+import datetime
+
+
+print('Lets find out a little about you!')
+name = input('What\'s your name? ')
+
+year = int(input('What year were you born? [YYYY] '))
+month = int(input('What month were you born? [MM] '))
+day = int(input('What day were you born? [DD] '))
+
+bday = datetime.date(year, month, day)
+this_year = datetime.date.today()
+
+age = this_year.year - bday.year
+print('{} you are {} years old'. format(name, age))
+
+age100 = 100 - int(age)
+
+print('{} in {} years you will be 100'.format(name, age100))
