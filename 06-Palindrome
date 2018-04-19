@@ -1,0 +1,12 @@
+#Ask the user to input a word. Find out if it is Palindrome.
+
+wrd = input('Type in something: ')
+wrd = str(wrd).lower()
+
+reverse_wrd = wrd[::-1]
+
+if wrd == reverse_wrd:
+    print('{} is a palindrome'.format(wrd))
+else:
+    print('{} is not a palindrome'.format(wrd))
+    
