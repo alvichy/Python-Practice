@@ -1,0 +1,28 @@
+# Return a list that contains only the elements that are common between the lists (without duplicates)
+# Randomly generate two lists to test this
+
+import random
+
+a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+i = []
+
+for numbers in set(a):
+    if numbers in set(b):
+        i.append(numbers)
+
+print('Initial given list. Common numbers:')
+print(sorted(i))
+
+
+x = {random.randint(0, 100) for x in range(30)}
+y = {random.randint(0, 100) for y in range(30)}
+z = []
+
+for num in x:
+    if num in y:
+        z.append(num)
+
+print()
+print('Common numbers between 2 random lists (between 0 and 100)')
+print(sorted(z))
