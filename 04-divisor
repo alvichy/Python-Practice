@@ -1,0 +1,11 @@
+number = int(input('Think of any number: '))
+
+divisor_list = []
+
+number_range = range(2, number+1)
+
+for i in number_range:
+    if number % i == 0:
+        divisor_list.append(i)
+
+print(divisor_list)
