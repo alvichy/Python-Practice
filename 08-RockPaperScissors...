@@ -1,0 +1,45 @@
+#Create a rock paper scissors game.
+#I went a little complicated and made a Rock paper scissors lizard spock from BBT
+
+def main():
+    header()
+    game()
+
+
+def header():
+    print('-------------------------------------')
+    print('           BIG BANG THEORY')
+    print(' rock paper scissors lizard spock')
+    print('-------------------------------------')
+    print()
+
+
+
+def game():
+    player1 = str(input("Player 1. What is your name? "))
+    player2 = str(input("Player 2. What is your name? "))
+    print()
+    cmd = 'empty'
+
+    while cmd != 'n' and cmd:
+        game_dic = {'r': 3, 'p': 5, 's': 7, 'l': 11, 'sp': 13}
+        usr1 = input('{} choose [R]OCK, [P]APER, [S]CISSORS, [L]IZZARD, [SP]OCK: '.format(player1)).lower().strip()
+        usr2 = input('{} choose [R]OCK, [P]APER, [S]CISSORS, [L]IZZARD, [SP]OCK: '.format(player2)).lower().strip()
+        a = game_dic.get(usr1)
+        b = game_dic.get(usr2)
+        div = a / b
+        print()
+
+        if div in [7/5, 5/3, 3/11, 11/13, 13/7, 7/11, 11/5, 5/13, 13/3, 3/7]:
+            print('Player 1. {} you WIN'.format(player1))
+        elif div == 1:
+            print('DRAW!.')
+        elif div in [5/7, 3/5, 3/11, 13/11, 7/12, 11/7, 5/11, 13/5, 3/13, 7/3]:
+            print('Player 2. {} you WIN'.format(player2))
+
+        cmd = input('Try Again? [Y/N] ').lower().strip()
+
+    print('GAME OVER!')
+
+
+main()
