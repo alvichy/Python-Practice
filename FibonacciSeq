@@ -1,0 +1,25 @@
+# write a program to list the fibonacci numbers
+
+
+def length():
+    num = int(input('How long would you like the Fibonacci Seq to be? '))
+    return num
+
+
+def seq(num):
+    x = 1
+    if num == 0:
+        fib = []
+    elif num == 1:
+        fib = [1]
+    elif num >= 2:
+        fib = [1, 1]
+        while num > x:
+            fib.append(fib[x] + fib[x-1])
+            x += 1
+
+    print(fib)
+
+
+num = length()
+seq(num)
