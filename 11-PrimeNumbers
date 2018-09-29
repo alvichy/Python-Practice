@@ -1,0 +1,24 @@
+# Prime Numbers
+# Ask for a number find out if its a prime number
+# Use functions
+
+def user():
+    number = int(input('Give me a number. lets find out if its prime? '))
+    if number == 0:
+        print('Try a number larger than 2 dude')
+        user()
+    return number
+
+
+def prime(number):
+    a = range(2, number)
+    b = [x for x in a if number % x == 0]
+    if len(b) == 0:
+        print('Your number is prime')
+    elif len(b) != 0:
+        print('Your number is not prime \nYou can divide it by these numbers:')
+        print(b)
+
+
+number = user()
+prime(number)
